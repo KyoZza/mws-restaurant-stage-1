@@ -91,11 +91,12 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  * Initialize Google map, called from HTML.
  */
 window.initMap = () => {
+  const map = document.getElementById('map');  
   let loc = {
     lat: 40.722216,
     lng: -73.987501
   };
-  self.map = new google.maps.Map(document.getElementById('map'), {
+  self.map = new google.maps.Map(map, {
     zoom: 12,
     center: loc,
     scrollwheel: false
@@ -161,6 +162,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = "Preview picture of " + restaurant.name;
   li.append(image);
 
   const textContainer = document.createElement('div');

@@ -38,6 +38,12 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+section {
+  width: 100%;
+}
+figure {
+  margin: 0;
+}
 #maincontent {
   background-color: #f3f3f3;
   width: 100%;
@@ -47,7 +53,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #dbdbdb;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px 0;
@@ -81,7 +87,13 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     width: calc(100% - 40px);
+    height: auto;
+    text-align: left;
     /* width: calc(50% - 80px); */
+}
+#breadcrumb ol {
+  margin: 0;
+  padding: 0;
 }
 
 /* Display list items side by side */
@@ -98,7 +110,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: #006cc9;
     text-decoration: none;
 }
 
@@ -117,7 +129,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
   /* height: 50px; */
-  background-color: #3397DB;
+  background-color: #007dbb;
   align-items: center;
   padding: 16px 0 10px;
 }
@@ -445,7 +457,7 @@ nav h1 a {
 
   .inside #map-container {
     background: blue none repeat scroll 0 0;
-    height: 85vh;
+    height: 74vh;
     position: fixed;
     right: 0;
     width: calc(50% - 50px);

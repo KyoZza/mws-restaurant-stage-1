@@ -15,9 +15,6 @@ self.addEventListener('install', function(event) {
         //'data/restaurants.json',
         // // 'js/main.js',
         'css/styles.css'
-        // // 'imgs/'
-        // // 'https://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff',
-        // // 'https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff'
       ]);
     })
   );
@@ -47,41 +44,10 @@ self.addEventListener('activate', (event) => {
  * @event fetch
  */
 self.addEventListener('fetch', (event) => {
-  // console.log('Hellooou');
-  // console.log(event.request);
-  // event.respondWith(
-  //   new Response('Hello <b>World!</b>', {
-  //     headers: {
-  //       'foo': 'bar'
-  //     }
-  //   })
-  // );
-
-
-  // event.respondWith(
-  //   fetch(event.request).then(function(response) {
-  //     if (response.status === 404) {
-  //       // TODO: instead, respond with the gif at
-  //       // /imgs/dr-evil.gif
-  //       // using a network request
-  //       return fetch('/imgs/dr-evil.gif');
-  //     }
-  //     return response;
-  //   }).catch(function() {
-  //     return new Response("Uh oh, that totally failed!");
-  //   })
-  // );
-
-
-  // let req = undefined;
-  // const test = 'bask';
-
   if(event.request.url.includes('restaurant.html')) req = 'restaurant.html';
   // Respond with an entry from the cache if there is one.
   // If there isn't, fetch from the network.
   event.respondWith(
-    
-
     caches.match(event.request).then((response) => {
       if(response) return response;
       return fetch(event.request).then((response) => {
