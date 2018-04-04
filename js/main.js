@@ -168,7 +168,7 @@ createRestaurantHTML = (restaurant) => {
   const textContainer = document.createElement('div');
   textContainer.className = 'restaurants-list-text';
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   textContainer.append(name);
 
